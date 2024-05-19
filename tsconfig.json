@@ -12,6 +12,6 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true
   },
-  "include": ["src/**/*", "index.ts"],
+  "include": ["index.ts"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../dist/bundle.umd.js"></script>
+    <script>
+      KeySound.setConfig({ parallelPlayback: true });
+      KeySound.bind({ key: 'a', src: 'click.mp3' });
+      KeySound.bind({ key: 's', src: 'click.mp3' });
+      KeySound.bind({ key: 'd', src: 'click.mp3' });
+      KeySound.bind({ key: 'f', src: 'click.mp3' });
+      KeySound.bind({ key: 'a', src: 'click.mp3' }); // will overwrite the previous binding
+
+      setTimeout(() => {
+        KeySound.pause();
+      }, 10000);
+      setTimeout(() => {
+        KeySound.resume();
+      }, 20000);
+    </script>
+  </head>
+  <body>
+    EXAMPLE
+  </body>
+</html>

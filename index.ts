@@ -1,3 +1,5 @@
-import { test } from './src/keysound';
+import { KeySound } from './src/keysound';
 
-test();
+const sound = new KeySound();
+
+export default sound;
