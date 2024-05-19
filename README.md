@@ -15,9 +15,9 @@ npm i key-sound
 This package can be used via CDN script tag to the `<head>` of your HTML file.
 
 ```html
-<script src="https://unpkg.com/key-sound@0.1.1/dist/bundle.umd.js"></script>
+<script src="https://unpkg.com/key-sound@0.2.1/dist/bundle.umd.js"></script>
   <script>
-    KeySound.setConfig({ parallelPlayback: true });
+    KeySound.setConfiguration({ parallelPlayback: true });
     KeySound.bind({ key: 'a', src: 'click.mp3' });
     KeySound.bind({ key: 's', src: 'click.mp3' });
 
@@ -36,7 +36,7 @@ or import it on your module like
 ```js
 import keysound from 'key-sound';
 
-keysound.setConfig({ parallelPlayback: true });
+keysound.setConfiguration({ parallelPlayback: true });
 keysound.bind({ key: 'a', src: 'click.mp3' });
 keysound.bind({ key: 's', src: 'click2.mp3' });
 keysound.unbind('s');
@@ -46,7 +46,7 @@ keysound.unbind('s');
 
 | Method                                                  | Description                                                                                                                                       |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| setConfig(config)                                       | Sets the config object. currently only `parallelPlayback` to enable click sound plays in parallel even before last sound of same key not finished |
+| setConfiguration(config)                                | Sets the config object. currently only `parallelPlayback` to enable click sound plays in parallel even before last sound of same key not finished |
 | bind({ key: 's', src: 'click2.mp3', callback: ()=>{} }) | Binds a key-source pair or an array of key-source pairs to the bindings list.                                                                     |
 | unbind(keys)                                            | Removes a binding for the given key from the list of bindings.                                                                                    |
 | pause()                                                 | Pauses the playback of all sounds.                                                                                                                |

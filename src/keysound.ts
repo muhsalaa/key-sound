@@ -109,15 +109,6 @@ export class KeySound {
   }
 
   /**
-   * Sets the config object.
-   *
-   * @param {KeySoundConfig} config - The new config object.
-   */
-  public setConfig(config: KeySoundConfig) {
-    this.config = { ...this.config, ...config };
-  }
-
-  /**
    * Binds a key-source pair or an array of key-source pairs to the object.
    * If an array is provided, each object in the array is added to the bindings.
    * If a single object is provided, it is added to the bindings.
@@ -156,6 +147,15 @@ export class KeySound {
     this.bindings = this.bindings.filter((binding) =>
       keysToUnbind.every((key) => binding.key !== key)
     );
+  }
+
+  /**
+   * Sets the config object.
+   *
+   * @param {KeySoundConfig} config - The new config object.
+   */
+  public setConfiguration(config: KeySoundConfig) {
+    this.config = { ...this.config, ...config };
   }
 
   public pause() {
