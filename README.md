@@ -15,7 +15,7 @@ npm i key-sound
 This package can be used via CDN script tag to the `<head>` of your HTML file.
 
 ```html
-<script src="https://unpkg.com/key-sound@0.1.0/dist/bundle.umd.js"></script>
+<script src="https://unpkg.com/key-sound@0.1.1/dist/bundle.umd.js"></script>
   <script>
     KeySound.setConfig({ parallelPlayback: true });
     KeySound.bind({ key: 'a', src: 'click.mp3' });

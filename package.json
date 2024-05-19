@@ -1,6 +1,6 @@
 {
   "name": "key-sound",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A library to bind keyboard events to sound",
   "main": "dist/bundle.umd.js",
   "module": "dist/bundle.esm.js",
@@ -9,6 +9,7 @@
     "prepare": "husky || true",
     "prepublish": "pnpm run build"
   },
+  "type": "module",
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix",
@@ -28,7 +29,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/muhsalaa/key-sound"
+    "url": "git+https://github.com/muhsalaa/key-sound.git"
   },
   "bugs": {
     "url": "https://github.com/muhsalaa/key-sound/issues"
